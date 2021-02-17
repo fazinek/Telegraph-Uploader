@@ -115,7 +115,7 @@ async def help(client, message):
   reply_markup = InlineKeyboardMarkup(buttons)
   await Tgraph.send_message(
         chat_id=message.chat.id,
-        text="""There Is Nothung To Know More,
+        text="""There Is Nothing To Know More,
         
 Just Send Me A Video/gif/photo Upto 5mb.
 
