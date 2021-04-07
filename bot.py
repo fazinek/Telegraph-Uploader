@@ -86,7 +86,7 @@ async def home(client, message):
     ],
     [
         InlineKeyboardButton('Channel', url='http://t.me/ekbotz_update'),
-        InlineKeyboardButton('Other Bots', url='https://t.me/ekbotz_update/106')
+        InlineKeyboardButton('Other Bots', url='https://t.me/eKbOtZ_upDaTE/131')
     ]]
   reply_markup = InlineKeyboardMarkup(buttons)
   await Tgraph.send_message(
