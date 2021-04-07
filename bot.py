@@ -26,7 +26,8 @@ Tgraph = Client(
    "Telegra.ph Uploader",
    api_id=Config.APP_ID,
    api_hash=Config.API_HASH,
-   bot_token=Config.TG_BOT_TOKEN,)
+   bot_token=Config.TG_BOT_TOKEN,
+)
 
 @Tgraph.on_message(filters.text)
 async def uploadtext(client, message):
