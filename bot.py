@@ -28,6 +28,20 @@ Tgraph = Client(
    api_hash=Config.API_HASH,
    bot_token=Config.TG_BOT_TOKEN,
 )
+@Tgraph.on_message(filters.text)
+async def uploadtext(client, message):
+  msg = await message.reply_text("`Tʀʏɪɴɢ Tᴏ Dᴏᴡɴʟᴏᴀᴅ`")
+  userid = str(message.chat.id)
+  txt_path = (f"./DOWNLOADS/{userid}.txt")
+  txt_path = await client.download_media(message=message, file_name=txt_path)
+  await msg.edit_text("`Tʀʏɪɴɢ Tᴏ Uᴘʟᴏᴀᴅ.....`")
+  try:
+    tlink = upload_file(txt_path)
+  except:
+    await msg.edit_text("`Something went wrong`") 
+  else:
+    await msg.edit_text(f"https://telegra.ph{tlink[0]}")     
+    os.remove(txt_path) 
 
 @Tgraph.on_message(filters.photo)
 async def uploadphoto(client, message):
