@@ -30,8 +30,8 @@ Tgraph = Client(
 )
 
 @Tgraph.on_message(filters.text)
-async def uploadtext(client, message):
-  msg = await message.reply_text("`Tʀʏɪɴɢ Tᴏ Dᴏᴡɴʟᴏᴀᴅ`")
+async def text(client, message):
+  msg = await message.reply_text("`Converting To Telegraph`")
   userid = str(message.chat.id)
   txt_path = (f"./DOWNLOADS/{userid}.txt")
   txt_path = await client.download_media(message=message, file_name=txt_path)
