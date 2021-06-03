@@ -33,7 +33,6 @@ Tgraph = Client(
 async def text(client, message):
   msg = await message.reply_text("`Converting To Telegraph`")
   userid = str(message.chat.id)
-  txt_path = (f"./DOWNLOADS/{userid}.txt")
   txt_path = await client.download_media(message=message, file_name=txt_path)
   await msg.edit_text("`Tʀʏɪɴɢ Tᴏ Uᴘʟᴏᴀᴅ.....`")
   try:
