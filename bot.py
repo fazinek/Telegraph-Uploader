@@ -29,20 +29,6 @@ Tgraph = Client(
    bot_token=Config.TG_BOT_TOKEN,
 )
 
-@Tgraph.on_message(filters.text)
-async def text(client, message):
-  msg = await message.reply_text("`Converting To Telegraph`")
-  userid = str(message.chat.id)
-  txt_path = await client.download_media(message=message, file_name=txt_path)
-  await msg.edit_text("`Tʀʏɪɴɢ Tᴏ Uᴘʟᴏᴀᴅ.....`")
-  try:
-    tlink = upload_file(txt_path)
-  except:
-    await msg.edit_text("`Something went wrong`") 
-  else:
-    await msg.edit_text(f"https://telegra.ph{tlink[0]}")     
-    os.remove(txt_path) 
-
 @Tgraph.on_message(filters.photo)
 async def uploadphoto(client, message):
   msg = await message.reply_text("`Tʀʏɪɴɢ Tᴏ Dᴏᴡɴʟᴏᴀᴅ`")
