@@ -86,7 +86,7 @@ async def home(client, message):
     ],
     [
         InlineKeyboardButton('Channel', url='http://t.me/ekbotz_update'),
-        InlineKeyboardButton('Other Bots', url='https://t.me/eKbOtZ_upDaTE/131')
+        InlineKeyboardButton('Other Bots', url='https://t.me/eKbOtZ_upDaTE/137')
     ]]
   reply_markup = InlineKeyboardMarkup(buttons)
   await Tgraph.send_message(
@@ -95,7 +95,7 @@ async def home(client, message):
         
 i am a simple telegraph Uploader. I Can Upload Photos, Videos And Gifs to Telegra.ph
         
-Simply send me photo, video or gif to upload to Telegra.ph
+Simply send me photo, video or gif to upload to `Telegra.ph`
         
 Made With Love  from @ekbotz_update</b>""",
         reply_markup=reply_markup,
